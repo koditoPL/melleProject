@@ -1,0 +1,16 @@
+@import '/src/styles.scss';
+
+.infoColumn{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: $blueBgColor;
+    &__text{
+        width: 50%;
+        margin: 0 auto;
+        p{
+            text-align: center;
+            font-weight: 300;
+            color: #fff;
+        }
+    }
+}
