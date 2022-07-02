@@ -22,9 +22,11 @@
     }
 }
 .loginForm{
-    width: 50%;
+    width: 90%;
     margin: 0 auto;
-
+    @include media-breakpoint-up(sm){
+        width: 50%;
+    }
     .form-group{
         margin: 20px 0;
         .form-control{
