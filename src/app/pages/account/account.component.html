@@ -1,1 +1,18 @@
-<p>account works!</p>
+<div class="container account">
+    <div class="account__heading">
+        <h1 class="title">Moje konto</h1>
+    </div>
+    <div class="account__main">
+        <div class="avatar">
+            <img src="/../assets/img/avatar.jpg" alt="user avatar" class="rounded-circle">
+        </div>
+        <div class="userData">
+            <p><span>Nazwa:</span> {{nameText}}
+            <p><span>Adres email:</span> {{emailText}}
+            </p>
+        </div>
+    </div>
+    <div class="logout">
+        <a class="btn btn-primary redirectButton" (click)="handleLogout()">Wyloguj</a>
+    </div>
+</div>

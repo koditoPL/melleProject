@@ -1,0 +1,44 @@
+@import '/src/styles.scss';
+
+.account{
+    padding: 50px;
+    &__heading{
+        margin-bottom: 50px;
+        text-align: center;
+        position: relative;
+            &:before{
+                content:'';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100px;
+                height: 3px;
+                background-color: $primary;
+            }
+    }
+    &__main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .userData{
+            margin-left: 50px;
+
+            p{
+                font-size: 1.2em;
+
+                span{
+                    color: $primary;
+                    font-weight: 500;
+                    font-size: 1.2em;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+    .logout{
+        text-align: center;
+        margin-top: 20px;
+    }
+}
