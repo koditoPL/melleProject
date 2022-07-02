@@ -17,6 +17,10 @@ export class AccountComponent implements OnInit {
    return email.split('@')[0]
   }
   
+  handleLogout(){
+    window.localStorage.removeItem('user')
+    this.router.navigate(['/'])
+  }
 
   constructor(private router:Router) { }
 
