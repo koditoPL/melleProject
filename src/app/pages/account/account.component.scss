@@ -1,7 +1,11 @@
 @import '/src/styles.scss';
 
 .account{
-    padding: 50px;
+    padding: 50px 20px;
+    @include media-breakpoint-up(md){
+        padding: 50px;
+    }
+
     &__heading{
         margin-bottom: 50px;
         text-align: center;
@@ -19,14 +23,26 @@
     }
     &__main{
         display: flex;
-        align-items: center;
-        justify-content: center;
-
+        flex-direction: column;
+        @include media-breakpoint-up(sm){
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+        .avatar{
+            text-align: center;
+        }
         .userData{
+            
+            @include media-breakpoint-up(sm){
             margin-left: 50px;
-
+            }
             p{
-                font-size: 1.2em;
+                font-size: 1em;
+                margin: 0;
+                @include media-breakpoint-up(md){
+                    font-size: 1.2em;
+                }
 
                 span{
                     color: $primary;
