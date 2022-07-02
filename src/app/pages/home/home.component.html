@@ -7,8 +7,8 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-6 col-12 text-center">
-        
-        <app-login class="loginBlock"></app-login>
+    <div class="col-lg-6 col-12 text-center loginColumn">
+        <app-login class="loginBlock h-100" *ngIf="isLogged===null"></app-login>
+        <app-is-logged class="isLoggedBlock h-100" *ngIf="isLogged !== null"></app-is-logged>
     </div>
 </div>

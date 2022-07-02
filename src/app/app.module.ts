@@ -7,6 +7,7 @@ import { AccountComponent } from './pages/account/account.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { IsLoggedComponent } from './components/is-logged/is-logged.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { FormsModule } from '@angular/forms';
     AccountComponent,
     HomeComponent,
     LoginComponent,
+    IsLoggedComponent
   ],
   imports: [
     BrowserModule,
