@@ -5,6 +5,9 @@
     <h2 class="title">Logowanie</h2>
     <p>Wypełnij ponizsze pola, aby zalogować się do systemu</p>
 </div>
+<div *ngIf="errorText!=''" class="alert alert-danger formError" role="alert">
+    {{errorText}}
+</div>
 <form #loginForm="ngForm" class="loginForm" (ngSubmit)="loginHandle(loginForm)" novalidate>
     <div class="form-group">
         <input type="email" name="email" #prmEmail="ngModel" [ngModel]="loginValues.email" class="form-control" placeholder="Email" required>
@@ -12,6 +15,10 @@
     <div class="form-group">
         <input type="password" name="password" [ngModel]="loginValues.password" class="form-control" minlength="8" placeholder="Hasło" required>
     </div>
-    <button type="submit" class="btn btn-primary w-100">Zaloguj się</button>
+    <button type="submit" class="btn btn-primary w-100" [disabled]="loading">
+        <span *ngIf="loading" class="spinner-border text-light">
+        </span>
+        <span *ngIf="!loading">Zaloguj się</span>
+    </button>
 
 </form>
