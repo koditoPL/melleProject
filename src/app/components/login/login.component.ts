@@ -40,9 +40,16 @@ export class LoginComponent implements OnInit {
       setTimeout(() => {
       const userSearch = this.usersList.filter(user => user.email === loginForm.value.email)
       if(userSearch.length>0){
-        window.localStorage.setItem('user',JSON.stringify(loginForm.value))
-        this.router.navigate(['/konto'])
-        this.logged = true
+        if(userSearch[0].email !==loginForm.value.email || userSearch[0].password !== loginForm.value.password){
+          this.errorText = "Nieprawidłowy email lub hasło"
+          this.loading = false
+        }
+        else{
+          window.localStorage.setItem('user',JSON.stringify(loginForm.value))
+          this.router.navigate(['/konto'])
+          this.logged = true
+          
+        }
       }
       else{
         this.errorText = "Nieprawidłowy email lub hasło"
