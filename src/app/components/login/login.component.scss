@@ -5,10 +5,11 @@
        margin: 30px auto;
     }
     &__header{
-        width: 50%;
+        width: 90%;
         margin: 20px auto;
         @include media-breakpoint-up(lg){
             margin: 30px auto 40px;
+            width: 50%;
         }
         .title{
             color: $darkTextColor;
