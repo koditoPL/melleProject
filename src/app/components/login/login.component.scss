@@ -34,6 +34,9 @@
             background-color: $inputBgColor;
             border-color: $placeholderColor;
 
+            &:focus{
+                box-shadow: 0 0 0 0.15rem rgb(72 124 210 / 25%);
+            }
             &::placeholder{
                 color: $placeholderColor;
             }
